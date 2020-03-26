@@ -12,6 +12,8 @@ const app = express();
 const server = http.Server(app);
 const io = new SocketIO(server);
 
+// Serve static files
+app.use(express.static('public'));
 
 app.get('/', (req, res) => {
     //res.send('Hello World');
